@@ -1,0 +1,54 @@
+# For advanced use and comprehensive documentation of the format, please see:
+# http://docs.haskellstack.org/en/stable/yaml_configuration/
+
+resolver: lts-7.7
+
+packages:
+- '.'
+- location:
+    git: https://github.com/reflex-frp/reflex
+    commit: 64902eaa55b8fc5d1457c06d69ae41cbd11daaa5  # -b develop as of Sun Nov  6 03:50:57 CET 2016
+  subdirs:
+  - '.'
+- location:
+    git: https://github.com/reflex-frp/reflex-dom
+    commit: f2d7c28b873e116ed795ded01a62b07586b703e4  # -b develop as of Sun Nov  6 03:51:48 CET 2016
+  subdirs:
+  - '.'
+#- location:
+#    git: https://github.com/ghcjs/ghcjs-dom
+#    commit: 784bdaa47dca673492cdaf521a04b8b667804a9b  # -b master as of Sun Nov  6 03:48:38 CET 2016
+#  subdirs:
+#  - ghcjs-dom-jsaddle
+#  - ghcjs-dom-jsffi
+#  - ghcjs-dom-webkit
+#  - ghcjs-dom
+#- location:
+#    git: https://github.com/ghcjs/jsaddle-dom
+#    commit: ebaa9be22378386ed21d9052f99af963ab4d1759  # -b master as of Sun Nov  6 03:57:25 CET 2016
+#  subdirs:
+#  - '.'
+
+extra-deps:
+- ghcjs-dom-0.2.4.0
+- jsaddle-0.5.2.0
+- reflex-0.5.0
+- reflex-dom-0.4
+- ref-tf-0.4.0.1
+- zenc-0.1.1
+
+# Override default flag values for local packages and extra-deps
+flags: {}
+
+# Extra package databases containing global packages
+extra-package-dbs: []
+
+compiler: ghcjs-0.2.1.9007007_ghc-8.0.1
+compiler-check: match-exact
+
+setup-info:
+  ghcjs:
+    source:
+      ghcjs-0.2.1.9007007_ghc-8.0.1:
+          url: http://ghcjs.tolysz.org/ghc-8.0-2016-11-03-lts-7.7-9007007.tar.gz
+          sha1: ce169f85f1c49ad613ae77fc494d5565452ff59a

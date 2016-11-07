@@ -1,0 +1,21 @@
+name:                zb-reflex-dom
+version:             0.1
+-- synopsis:
+-- description:
+license:             AGPL-3
+license-file:        LICENSE
+author:              Matthias Fischmann
+maintainer:          mf@zerobuzz.net
+copyright:           zerobuzz UG (haftungsbeschränkt)
+-- category:
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable zb-reflex-dom
+  main-is:             Main.hs
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  build-depends:
+      base >=4.6
+    , reflex
+    , reflex-dom
